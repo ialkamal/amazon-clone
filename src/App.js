@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAnExP9m4D2B5kR0S0BSoWsQ7wMmC75-VE",
+//   authDomain: "clone-acd41.firebaseapp.com",
+//   databaseURL: "https://clone-acd41.firebaseio.com",
+//   projectId: "clone-acd41",
+//   storageBucket: "clone-acd41.appspot.com",
+//   messagingSenderId: "427331460334",
+//   appId: "1:427331460334:web:7539347b97a5d98f6b27ff",
+//   measurementId: "G-STWRPQPCVL"
+// };
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Amazon Clone!</h1>
     </div>
   );
 }
