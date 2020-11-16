@@ -10,11 +10,26 @@
 // };
 
 import "./App.css";
+import { Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
-      <h1>Amazon Clone!</h1>
+      <Switch>
+        <Route path="/checkout">
+          <Navbar />
+          <h1>Checkout</h1>
+        </Route>
+        <Route path="/login">
+          <h1>Login</h1>
+        </Route>
+        <Route path="/">
+          <Navbar />
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }
