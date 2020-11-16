@@ -4,12 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
+import { StateProvider } from "./contexts/StateContext";
+import { initialState, reducer } from "./reducers/reducer";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <Router>
+        <App />
+      </Router>
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

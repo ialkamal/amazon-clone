@@ -3,8 +3,11 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import { useStateValue } from "../contexts/StateContext";
 
 function Navbar() {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <nav className="header">
       {/* logo on the left */}
@@ -32,7 +35,7 @@ function Navbar() {
         {/* 2nd Link */}
         <Link to="/" className="header__link">
           <div className="header__option">
-            <span className="header_optionLineOne">Return</span>
+            <span className="header_optionLineOne">Returns</span>
             <span className="header_optionLineTwo">& Orders</span>
           </div>
         </Link>
@@ -48,7 +51,9 @@ function Navbar() {
           <div className="header__optionsBasket">
             {/* basket icon with nunmber */}
             <ShoppingBasketIcon />
-            <span className="header_optionLineTwo header_basketCount">0</span>
+            <span className="header_optionLineTwo header_basketCount">
+              {basket.length}
+            </span>
           </div>
         </Link>
       </div>
