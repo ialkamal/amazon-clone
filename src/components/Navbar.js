@@ -58,7 +58,7 @@ function Navbar() {
         {/* 4th Link */}
         <Link to="/checkout" className="header__link">
           <div className="header__optionsBasket">
-            {/* basket icon with nunmber */}
+            {/* basket icon with number */}
             <ShoppingBasketIcon />
             <span className="header_optionLineTwo header_basketCount">
               {basket.length}

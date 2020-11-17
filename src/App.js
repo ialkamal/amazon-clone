@@ -24,8 +24,6 @@ function App() {
     };
   }, []);
 
-  console.log("USER----> ", user);
-
   return (
     <div className="App">
       <Switch>

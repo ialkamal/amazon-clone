@@ -17,7 +17,6 @@ function Login() {
     auth
       .signInWithEmailAndPassword(credentials.email, credentials.password)
       .then((auth) => {
-        console.log(auth);
         history.push("/");
       })
       .catch((err) => console.log(err));
@@ -28,7 +27,6 @@ function Login() {
     auth
       .createUserWithEmailAndPassword(credentials.email, credentials.password)
       .then((auth) => {
-        console.log(auth);
         history.push("/");
       })
       .catch((err) => console.log(err));
