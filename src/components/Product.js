@@ -3,9 +3,9 @@ import "./Product.css";
 import { useStateValue } from "../contexts/StateContext";
 
 function Product({ product }) {
-  const { id, title, image, price, rating } = product;
+  const {  title, image, price, rating } = product;
 
-  const [{ basket }, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
 
   const addItem = () => {
     dispatch({ type: "ADD_TO_BASKET", payload: product });
